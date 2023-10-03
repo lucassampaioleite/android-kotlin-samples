@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CalculatorApplication</string>
+    <string name="title_activity_result">Result</string>
+    <string name="text_view_insert_numbers">Enter the numbers:</string>
+    <string name="text_view_title">Calculator</string>
+    <string name="sum">SUM</string>
+    <string name="sub">SUB</string>
+    <string name="mul">MUL</string>
+    <string name="div">DIV</string>
+    <string name="result">Result: </string>
+</resources>
