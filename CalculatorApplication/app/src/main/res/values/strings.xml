@@ -8,4 +8,6 @@
     <string name="mul">MUL</string>
     <string name="div">DIV</string>
     <string name="result">Result: </string>
+    <string name="value_1">Value 1</string>
+    <string name="value_2">Value 2</string>
 </resources>
