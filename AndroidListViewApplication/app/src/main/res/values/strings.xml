@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">AndroidListViewApplication</string>
+    <string name="title_activity_team">TeamActivity</string>
+
+    <string name="team_name">Seleção</string>
+    <string name="team_continent">Continente</string>
+    <string name="team_shield">Shield</string>
+
+    <string-array name="array_team_names">
+        <item>Brasil</item>
+        <item>Argentina</item>
+        <item>Alemanha</item>
+    </string-array>
+
+    <string-array name="array_team_continents">
+        <item>America</item>
+        <item>Europa</item>
+    </string-array>
+</resources>
+
