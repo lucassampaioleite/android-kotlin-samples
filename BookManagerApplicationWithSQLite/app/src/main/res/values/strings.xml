@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">BookManagerApplicationWithSQLite</string>
+    <string name="title_activity_create_book">CreateBookActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_list_data">ListDataActivity</string>
+    <string name="title_activity_update">UpdateActivity</string>
+    <string name="book_manager_application">Book Manager Application</string>
+    <string name="create_a_book">Create a book</string>
+    <string name="update_a_book">Update a book</string>
+    <string name="list_all_books">List all books</string>
+    <string name="add_book">Add book</string>
+    <string name="publisher">Publisher</string>
+    <string name="author">Author</string>
+    <string name="title">Title</string>
+    <string name="id">id</string>
+    <string name="update">Update</string>
+    <string name="remove">Remove</string>
+</resources>
