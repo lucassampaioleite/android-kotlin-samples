@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">LoginProject</string>
+    <string name="welcome">Bem vindo!</string>
+    <string name="email">Email</string>
+    <string name="password">Senha</string>
+    <string name="login">Login</string>
+    <string name="cin_logo">cin logo</string>
+    <string name="welcome_2">Seja bem Vindo!</string>
+    <string name="user">usuário:</string>
+    <string name="logged_in">logado em:</string>
+    <string name="option1">Option1</string>
+    <string name="option1_selected">option1 was selected</string>
+    <string name="option2">Option2</string>
+    <string name="sub1">sub1</string>
+    <string name="sub2">sub2</string>
+    <string name="option3">Option3</string>
+    <string name="user_admin">admin@cin.ufpe.br</string>
+    <string name="user_password">admin</string>
+    <string name="toast_success">success</string>
+    <string name="toast_failure">invalid credentials</string>
+    <string name="toast_incompatible_application">Seu dispositivo não possui aplicação compatível com a funcionalidade</string>
+    <string name="second_activity_title">Mobile Development</string>
+    <string name="dialog_message">Tem certeza que deseja sair?</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+    <string name="shared_text">Testando opção de compartilhamento de texto para outras aplicações…</string>
+    <string name="share_via">Compartilhar via…</string>
+
+</resources>
