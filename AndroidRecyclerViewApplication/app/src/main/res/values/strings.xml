@@ -3,18 +3,26 @@
 
     <string name="team_name">Seleção</string>
     <string name="team_continent">Continente</string>
-    <string name="team_shield">Shield</string>
+    <string name="team_shield">Escudo</string>
 
-    <string-array name="array_team_names">
+    <string-array name="array_teams_names">
         <item>Brasil</item>
         <item>Argentina</item>
         <item>Alemanha</item>
+        <item>Portugal</item>
+        <item>Croácia</item>
+        <item>Malawi</item>
+        <item>Catar</item>
+
     </string-array>
 
-    <string-array name="array_team_continents">
+    <string-array name="array_teams_continents">
         <item>América</item>
         <item>Europa</item>
+        <item>Africa</item>
+        <item>Ásia</item>
     </string-array>
     <string name="title_activity_team">TeamActivity</string>
+
 </resources>
 

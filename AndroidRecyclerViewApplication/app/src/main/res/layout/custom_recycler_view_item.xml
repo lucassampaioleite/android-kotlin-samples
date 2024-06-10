@@ -4,7 +4,7 @@
     android:layout_height="100dp"
     android:orientation="horizontal">
     <ImageView
-        android:id="@+id/imageView_teamShield"
+        android:id="@+id/imv_teamShield"
         android:layout_width="100dp"
         android:layout_height="match_parent"
         android:contentDescription="@string/team_shield" />
@@ -13,16 +13,17 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <TextView
-            android:id="@+id/textView_team"
+            android:id="@+id/txt_team"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/team_name"
             android:textSize="30sp" />
         <TextView
-            android:id="@+id/textView_continent"
+            android:id="@+id/txt_continent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/team_continent"
             android:textSize="20sp" />
     </LinearLayout>
 </LinearLayout>
+

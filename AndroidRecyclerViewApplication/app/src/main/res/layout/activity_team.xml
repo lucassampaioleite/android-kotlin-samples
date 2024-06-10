@@ -7,7 +7,7 @@
     tools:context=".TeamActivity">
 
     <ImageView
-        android:id="@+id/acTeamImageViewTeamShield"
+        android:id="@+id/actTeamImgTeamShield"
         android:layout_width="250dp"
         android:layout_height="250dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,7 +20,7 @@
         android:contentDescription="@string/team_shield" />
 
     <TextView
-        android:id="@+id/acTeamTextViewName"
+        android:id="@+id/actTeamTxtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -29,11 +29,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/acTeamImageViewTeamShield"
+        app:layout_constraintTop_toBottomOf="@+id/actTeamImgTeamShield"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/acTeamTextViewContinent"
+        android:id="@+id/actTeamTxtContinent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -42,6 +42,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/acTeamTextViewName"
+        app:layout_constraintTop_toBottomOf="@+id/actTeamTxtName"
         app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

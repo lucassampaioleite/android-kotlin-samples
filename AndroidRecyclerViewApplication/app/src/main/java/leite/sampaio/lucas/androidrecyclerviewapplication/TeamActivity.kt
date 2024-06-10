@@ -1,25 +1,28 @@
 package leite.sampaio.lucas.androidrecyclerviewapplication
 
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.activity.ComponentActivity
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import leite.sampaio.lucas.androidrecyclerviewapplication.databinding.ActivityTeamBinding
 
 class TeamActivity : ComponentActivity() {
+
+    private lateinit var binding: ActivityTeamBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_team)
+        binding = ActivityTeamBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val teamName = intent.getStringExtra("TAG_NAME")
         val teamContinent = intent.getStringExtra("TAG_CONTINENT")
         val teamShieldId = intent.getIntExtra("TAG_SHIELD", 0)
 
-        val textViewName = findViewById<TextView>(R.id.acTeamTextViewName)
-        val textViewContinent = findViewById<TextView>(R.id.acTeamTextViewContinent)
-        val imageViewShield = findViewById<ImageView>(R.id.acTeamImageViewTeamShield)
-
-        textViewName.text = teamName.toString()
-        textViewContinent.text = teamContinent.toString()
-        imageViewShield.setImageResource(teamShieldId)
+        binding.actTeamTxtName.text = teamName.toString()
+        binding.actTeamTxtContinent.text = teamContinent.toString()
+        binding.actTeamImgTeamShield.setImageResource(teamShieldId)
     }
 }
