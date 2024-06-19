@@ -1,13 +1,13 @@
-package leite.sampaio.lucas.bookmanagerapplicationwithsqlite
+package leite.sampaio.lucas.bookmanagerapplicationwithsqlite.sqlite
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
-class CreateDB(context: Context): SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
+class CreateDB(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
 
     companion object {
-        const val DB_NAME = "bank.db"
+        const val DB_NAME = "book.db"
         const val TABLE = "book"
         const val ID = "_id"
         const val TITLE = "title"
@@ -29,3 +29,6 @@ class CreateDB(context: Context): SQLiteOpenHelper(context, DB_NAME, null, DB_VE
         onCreate(db)
     }
 }
+
+
+

@@ -2,6 +2,7 @@ package leite.sampaio.lucas.androidrecyclerviewapplication
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -35,6 +36,8 @@ class MainActivity : ComponentActivity() {
         val teamsCustomAdapter = TeamsCustomAdapter(teamsList)
         recyclerView.adapter = teamsCustomAdapter
         recyclerView.layoutManager = LinearLayoutManager(this)
+        val dividerItemDecoration = DividerItemDecoration(recyclerView.context, DividerItemDecoration.VERTICAL)
+        recyclerView.addItemDecoration(dividerItemDecoration)
 
 //        recyclerView.layoutManager = LinearLayoutManager(this,
 //            LinearLayoutManager.HORIZONTAL, false)

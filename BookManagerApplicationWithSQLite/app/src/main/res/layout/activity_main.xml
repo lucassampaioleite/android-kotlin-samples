@@ -8,51 +8,54 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/buttonList"
+        android:id="@+id/btnListAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/list_all_books"
-        app:layout_constraintBottom_toTopOf="@+id/buttonUpd"
-        app:layout_constraintEnd_toEndOf="@+id/buttonUpd"
-        app:layout_constraintStart_toStartOf="@+id/buttonUpd"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAdd" />
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnUpdate"
+        app:layout_constraintEnd_toEndOf="@+id/btnUpdate"
+        app:layout_constraintStart_toStartOf="@+id/btnUpdate"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd" />
 
     <Button
-        android:id="@+id/buttonUpd"
+        android:id="@+id/btnUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/update_a_book"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonList" />
+        app:layout_constraintTop_toBottomOf="@+id/btnListAll" />
 
     <Button
-        android:id="@+id/buttonAdd"
+        android:id="@+id/btnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="@string/create_a_book"
-        app:layout_constraintBottom_toTopOf="@+id/buttonList"
-        app:layout_constraintEnd_toEndOf="@+id/buttonList"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnListAll"
+        app:layout_constraintEnd_toEndOf="@+id/btnListAll"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/buttonList"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/btnListAll"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
         app:layout_constraintVertical_chainStyle="spread" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:text="@string/book_manager_application"
-        android:textSize="20sp"
+        android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/buttonAdd"
-        app:layout_constraintEnd_toEndOf="@+id/buttonAdd"
+        app:layout_constraintBottom_toTopOf="@+id/btnAdd"
+        app:layout_constraintEnd_toEndOf="@+id/btnAdd"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/buttonAdd"
+        app:layout_constraintStart_toStartOf="@+id/btnAdd"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 

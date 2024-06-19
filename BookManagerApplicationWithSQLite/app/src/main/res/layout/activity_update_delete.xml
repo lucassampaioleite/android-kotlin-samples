@@ -7,58 +7,58 @@
     android:padding="10dp">
 
     <Button
-        android:id="@+id/btUpdateUpdate"
+        android:id="@+id/btnUpdActUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/update"
-        app:layout_constraintEnd_toStartOf="@+id/btUpdateDelete"
+        app:layout_constraintEnd_toStartOf="@+id/btnUpdActDelete"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUpdatePublisher" />
+        app:layout_constraintTop_toBottomOf="@+id/edtUpdActPublisher" />
 
     <Button
-        android:id="@+id/btUpdateDelete"
+        android:id="@+id/btnUpdActDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/btUpdateUpdate"
-        android:layout_alignRight="@+id/btUpdateUpdate"
+        android:layout_alignEnd="@+id/btnUpdActUpdate"
+        android:layout_alignRight="@+id/btnUpdActUpdate"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:text="@string/remove"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btUpdateUpdate"
-        app:layout_constraintTop_toTopOf="@+id/btUpdateUpdate" />
+        app:layout_constraintStart_toEndOf="@+id/btnUpdActUpdate"
+        app:layout_constraintTop_toTopOf="@+id/btnUpdActUpdate" />
 
     <EditText
-        android:id="@+id/etUpdateAuthor"
+        android:id="@+id/edtUpdActAuthor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUpdateAuthor" />
+        app:layout_constraintTop_toBottomOf="@+id/txtUpdActAuthor" />
 
     <EditText
-        android:id="@+id/etUpdatePublisher"
+        android:id="@+id/edtUpdActPublisher"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUpdatePublisher" />
+        app:layout_constraintTop_toBottomOf="@+id/txtUpdActPublisher" />
 
     <EditText
-        android:id="@+id/etUpdateTitle"
+        android:id="@+id/edtUpdActTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUpdateTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/txtUpdActTitle" />
 
 
     <TextView
-        android:id="@+id/tvUpdatePublisher"
+        android:id="@+id/txtUpdActPublisher"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -67,10 +67,10 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUpdateAuthor" />
+        app:layout_constraintTop_toBottomOf="@+id/edtUpdActAuthor" />
 
     <TextView
-        android:id="@+id/tvUpdateAuthor"
+        android:id="@+id/txtUpdActAuthor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -79,10 +79,10 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUpdateTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/edtUpdActTitle" />
 
     <TextView
-        android:id="@+id/tvUpdateTitle"
+        android:id="@+id/txtUpdActTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title"

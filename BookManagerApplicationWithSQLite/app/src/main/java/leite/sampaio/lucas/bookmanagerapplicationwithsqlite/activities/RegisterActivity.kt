@@ -1,46 +1,32 @@
 package leite.sampaio.lucas.bookmanagerapplicationwithsqlite.activities
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.ComponentActivity
-import leite.sampaio.lucas.bookmanagerapplicationwithsqlite.DatabaseController
-import leite.sampaio.lucas.bookmanagerapplicationwithsqlite.R
+import leite.sampaio.lucas.bookmanagerapplicationwithsqlite.databinding.ActivityRegisterBinding
+import leite.sampaio.lucas.bookmanagerapplicationwithsqlite.sqlite.DatabaseController
 
 class RegisterActivity : ComponentActivity() {
-    private lateinit var titleEditText: EditText
-    private lateinit var authorEditText: EditText
-    private lateinit var publisherEditText: EditText
-    private lateinit var registerButton: Button
+
+    private lateinit var binding: ActivityRegisterBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        binding = ActivityRegisterBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        initializeViews()
+        binding.btnRegister.setOnClickListener {
+            val titleString = binding.edtTitle.text.toString()
+            val authorString = binding.edtAuthor.text.toString()
+            val publisherString = binding.edtPublisher.text.toString()
 
-        registerButton.setOnClickListener {
-            val titleString = titleEditText.text.toString()
-            val authorString = authorEditText.text.toString()
-            val publisherString = publisherEditText.text.toString()
-
-            val dbController = DatabaseController(applicationContext)
+            val dbController = DatabaseController(this)
             val result = dbController.insertData(titleString, authorString, publisherString)
             showToast(result)
 
             clearViews()
 
-            navigateToListDataActivity()
         }
-    }
-
-    private fun initializeViews() {
-        titleEditText = findViewById(R.id.etTitle)
-        authorEditText = findViewById(R.id.etAuthor)
-        publisherEditText = findViewById(R.id.etPublisher)
-        registerButton = findViewById(R.id.buttonRegister)
     }
 
     private fun showToast(message: String) {
@@ -48,14 +34,8 @@ class RegisterActivity : ComponentActivity() {
     }
 
     private fun clearViews() {
-        titleEditText.text.clear()
-        authorEditText.text.clear()
-        publisherEditText.text.clear()
-    }
-
-    private fun navigateToListDataActivity() {
-        val intent = Intent(this, ListDataActivity::class.java)
-        startActivity(intent)
+        binding.edtTitle.text.clear()
+        binding.edtAuthor.text.clear()
+        binding.edtPublisher.text.clear()
     }
 }
-

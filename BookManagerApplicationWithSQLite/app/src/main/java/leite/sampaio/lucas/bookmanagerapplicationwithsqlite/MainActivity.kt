@@ -2,35 +2,35 @@ package leite.sampaio.lucas.bookmanagerapplicationwithsqlite
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.activity.ComponentActivity
 import leite.sampaio.lucas.bookmanagerapplicationwithsqlite.activities.ListDataActivity
 import leite.sampaio.lucas.bookmanagerapplicationwithsqlite.activities.RegisterActivity
+import leite.sampaio.lucas.bookmanagerapplicationwithsqlite.databinding.ActivityMainBinding
+
 
 class MainActivity : ComponentActivity() {
+
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val buttonCreate: Button = findViewById(R.id.buttonAdd)
-        val buttonUpdate: Button = findViewById(R.id.buttonUpd)
-        val buttonList: Button = findViewById(R.id.buttonList)
-
-        buttonCreate.setOnClickListener {
+        binding.btnAdd.setOnClickListener(){
             startNewActivity(RegisterActivity::class.java)
         }
 
-        buttonUpdate.setOnClickListener {
+        binding.btnListAll.setOnClickListener(){
             startNewActivity(ListDataActivity::class.java)
         }
 
-        buttonList.setOnClickListener {
+        binding.btnUpdate.setOnClickListener(){
             startNewActivity(ListDataActivity::class.java)
         }
     }
-
     private fun startNewActivity(activityClass: Class<*>) {
         val intent = Intent(this, activityClass)
         startActivity(intent)
     }
 }
+

@@ -4,34 +4,33 @@ import android.database.Cursor
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import leite.sampaio.lucas.bookmanagerapplicationwithsqlite.DatabaseController
-import leite.sampaio.lucas.bookmanagerapplicationwithsqlite.R
-import leite.sampaio.lucas.bookmanagerapplicationwithsqlite.adapters.CustomCursorAdapter
+import leite.sampaio.lucas.bookmanagerapplicationwithsqlite.adapter.CustomAdapter
+import leite.sampaio.lucas.bookmanagerapplicationwithsqlite.databinding.ActivityListDataBinding
+import leite.sampaio.lucas.bookmanagerapplicationwithsqlite.sqlite.DatabaseController
 
 class ListDataActivity : ComponentActivity() {
-
+    private lateinit var binding: ActivityListDataBinding
     private lateinit var dbController: DatabaseController
     private lateinit var cursor: Cursor
-    private lateinit var adapter: CustomCursorAdapter
+    private lateinit var customAdapter: CustomAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list_data)
+        binding = ActivityListDataBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        dbController = DatabaseController(applicationContext)
-        cursor = dbController.loadData()!!
+        dbController = DatabaseController(this)
+        cursor = dbController.loadData()
 
-        val recyclerView = findViewById<RecyclerView>(R.id.rvData)
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = CustomCursorAdapter(cursor)
-        recyclerView.adapter = adapter
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        customAdapter = CustomAdapter(cursor)
+        binding.recyclerView.adapter = customAdapter
+
     }
-
     override fun onResume() {
         super.onResume()
-        cursor = dbController.loadData()!!
-        adapter.swapCursor(cursor)
+        cursor = dbController.loadData()
+        customAdapter.updateData(cursor)
     }
 }
 
