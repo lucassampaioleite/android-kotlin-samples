@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PhoneBookProject</string>
+    <string name="send">SEND</string>
+    <string name="name">name</string>
+    <string name="phone">phone</string>
+    <string name="id">id</string>
+</resources>
