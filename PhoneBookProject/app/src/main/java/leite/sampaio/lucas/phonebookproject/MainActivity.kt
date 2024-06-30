@@ -32,7 +32,8 @@ class MainActivity : ComponentActivity() {
         firebaseRef = database.getReference("contacts")
 
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
-        customAdapter = CustomAdapter(contactsList)
+        customAdapter = CustomAdapter(
+            contactsList, binding.edtName, binding.edtPhone, binding.btnSend, binding.btnUpdate)
         binding.recyclerView.adapter = customAdapter
         getData()
 
@@ -52,11 +53,13 @@ class MainActivity : ComponentActivity() {
         } else {
             val contactId = firebaseRef.push().key
             val contact = Contact(contactId, name, phoneNumber)
-
             if (contactId != null) {
                 firebaseRef.child(contactId).setValue(contact)
                     .addOnCompleteListener {
+                        customAdapter.notifyItemInserted(contactsList.size - 1)
                         showToast("Success")
+                        binding.edtName.text.clear()
+                        binding.edtPhone.text.clear()
                     }
                     .addOnFailureListener {
                         showToast("Error: ${it.message}")
@@ -65,10 +68,6 @@ class MainActivity : ComponentActivity() {
                 showToast("Error")
             }
         }
-    }
-
-    private fun showToast(message: String){
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
     }
 
     private fun getData() {
@@ -80,13 +79,16 @@ class MainActivity : ComponentActivity() {
                         val contact = contactSnap.getValue(Contact::class.java)
                         contactsList.add(contact!!)
                     }
-                    customAdapter.notifyItemInserted(contactsList.size - 1)
                 }
             }
             override fun onCancelled(error: DatabaseError) {
                 showToast("Error: $error")
             }
         })
+    }
+
+    private fun showToast(message: String){
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
     }
 
 }
