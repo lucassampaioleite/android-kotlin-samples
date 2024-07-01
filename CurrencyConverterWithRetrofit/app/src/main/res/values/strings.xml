@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CurrencyConverterWithRetrofit</string>
+    <string name="from">from</string>
+    <string name="to">to</string>
+    <string name="cash_value">Cash value:</string>
+    <string name="convert">CONVERT</string>
+    <string name="currency_converter_application">Currency converter application</string>
+</resources>
