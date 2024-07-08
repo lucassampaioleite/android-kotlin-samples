@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/cin_logo"
+        android:src="@drawable/logocin" />
+
+    <TextView
+        android:id="@+id/txtLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/red_dark"
+        android:text="@string/welcome" />
+
+    <EditText
+        android:id="@+id/edtEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="250dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/email"
+        android:textColorHint="@color/red_dark"
+        android:backgroundTint="@color/red_dark"
+        android:inputType="textEmailAddress"
+        android:autofillHints="emailAddress"/>
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="250dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/password"
+        android:textColorHint="@color/red_dark"
+        android:backgroundTint="@color/red_dark"
+        android:inputType="textPassword"
+        android:autofillHints="emailAddress"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="250dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/red_dark"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:text="@string/login" />
+</LinearLayout>

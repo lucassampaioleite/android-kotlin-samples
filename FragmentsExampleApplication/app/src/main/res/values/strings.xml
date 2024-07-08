@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FragmentsExampleApplication</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome">Bem vindo!</string>
+    <string name="email">Email</string>
+    <string name="password">Senha</string>
+    <string name="login">Login</string>
+    <string name="cin_logo">cin logo</string>
+    <string name="home">Home Fragment</string>
+</resources>
