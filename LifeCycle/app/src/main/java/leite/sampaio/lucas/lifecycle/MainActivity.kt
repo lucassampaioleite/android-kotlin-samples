@@ -40,5 +40,17 @@ class MainActivity : ComponentActivity() {
         Log.d("TAG_DEBUG", "onDestroy()")
         super.onDestroy()
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        Log.d("TAG_DEBUG", "onSaveInstanceState()")
+
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        Log.d("TAG_DEBUG", "onRestore")
+
+    }
 }
 

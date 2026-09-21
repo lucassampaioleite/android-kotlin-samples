@@ -65,5 +65,20 @@ class MainActivity : ComponentActivity() {
         startActivity(intent)
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString("edtNum1", editTextNum1.text.toString())
+        outState.putString("edtNum2", editTextNum2.text.toString())
+        outState.putString("tvResult", textViewResult.text.toString())
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+
+        editTextNum1.setText(savedInstanceState.getString("edtNum1"))
+        editTextNum2.setText(savedInstanceState.getString("edtNum2"))
+        textViewResult.text = savedInstanceState.getString("tvResult")
+    }
+
 
 }

@@ -30,7 +30,7 @@ class MainActivity : FragmentActivity() {
             supportFragmentManager.commit {
                 add<LoginFragment>(R.id.fragmentContainerView, args = bundle)
             }
-        }
+       }
     }
 
     fun replaceFragment(fragment: Fragment) {

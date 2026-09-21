@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RoomSQLiteApplication</string>
+    <string name="book_management">Gerenciamento de Livros</string>
+    <string name="title">Título</string>
+    <string name="author">Autor</string>
+    <string name="year">Ano</string>
+    <string name="save">Salvar</string>
+    <string name="update">Atualizar</string>
+    <string name="books">Livros</string>
+    <string name="delete">Excluir</string>
+</resources>
