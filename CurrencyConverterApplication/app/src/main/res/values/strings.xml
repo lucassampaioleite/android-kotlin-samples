@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CurrencyConverterApplication</string>
+    <string name="from">De:</string>
+    <string name="to">Para:</string>
+    <string name="cash_value">Valor:</string>
+    <string name="convert">CONVERTER</string>
+    <string name="currency_converter_application">Conversor de Moedas</string>
+</resources>
